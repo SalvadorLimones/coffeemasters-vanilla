@@ -4,6 +4,7 @@ import { loadData } from "./services/Menu.js";
 
 window.app = {};
 app.Store = Store;
+app.router = Router;
 
 window.addEventListener("DOMContentLoaded", () => {
   loadData();
