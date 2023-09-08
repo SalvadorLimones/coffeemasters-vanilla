@@ -32,19 +32,19 @@ const Router = {
         if (route.startsWith("/product-")) {
           pageElement = document.createElement("details-page");
           const paramId = route.substring(route.lastIndexOf("-") + 1);
-          pageElement.dataset.id = paramId;
+          pageElement.dataset.productId = paramId;
         }
     }
 
     if (pageElement) {
-      //document.querySelector("main").children(0).remmove();
+      //document.querySelector("main").children(0).remove();
 
       const cache = document.querySelector("main");
       cache.innerHTML = "";
       cache.appendChild(pageElement);
-      window.scrollX = 0;
-      window.scrollY = 0;
     }
+    window.scrollX = 0;
+    window.scrollY = 0;
   },
 };
 
